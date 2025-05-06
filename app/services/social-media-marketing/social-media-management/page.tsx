@@ -22,6 +22,10 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function SocialMediaManagementPage() {
+  // Primary color for consistent branding
+  const primaryColor = "#205A59";
+  const secondaryColor = "#8BA640";
+
   const staggerContainer = {
     hidden: {},
     visible: {
@@ -45,7 +49,7 @@ export default function SocialMediaManagementPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-[#2BC4C1] to-[#3B82F6] text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-[#205A59] to-[#8BA640] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
@@ -64,7 +68,7 @@ export default function SocialMediaManagementPage() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
             <motion.div variants={fadeInUp}>
-              <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold rounded-full bg-white text-[#2BC4C1]">
+              <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold rounded-full bg-white text-[#205A59]">
                 Social Media Management
               </span>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -74,12 +78,12 @@ export default function SocialMediaManagementPage() {
                 Custom strategies that promote sales, content engagement, and measurable growth—powered by Markov's expert team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-[#2BC4C1] hover:bg-gray-100 font-bold">Get My Free Proposal</Button>
+                <Button className="bg-white text-[#205A59] hover:bg-gray-100 font-bold">Get My Free Proposal</Button>
               </div>
             </motion.div>
             <motion.div variants={fadeInUp} className="hidden lg:block">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-400/20 rounded-xl transform rotate-3"></div>
+                <div className="absolute inset-0 bg-[#8BA640]/20 rounded-xl transform rotate-3"></div>
                 <Image
                   src="/social_media_management.png"
                   alt="Social Media Management"
@@ -94,7 +98,7 @@ export default function SocialMediaManagementPage() {
       </section>
 
       {/* Trust Badges */}
-      <section className="py-6 bg-[#6B8E23]">
+      <section className="py-6 bg-[#8BA640]">
         <div className="container mx-auto flex flex-wrap justify-center gap-8 items-center">
           <div className="flex flex-col items-center">
             <Star className="text-yellow-400 w-8 h-8 mb-1" />
@@ -120,7 +124,7 @@ export default function SocialMediaManagementPage() {
           <div>
             <h2 className="text-3xl font-bold text-[#205A59] mb-4">What is Social Media Management?</h2>
             <p className="text-gray-700 mb-4">Custom strategies that promote sales, content engagement, and measurable growth. Markov's social media management is more than just posting—it's about building a community, driving engagement, and delivering real business results.</p>
-            <ul className="space-y-2 text-[#2BC4C1] font-medium">
+            <ul className="space-y-2 text-[#205A59] font-medium">
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5" /> Content planning & creation</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5" /> Community management</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5" /> Analytics & reporting</li>
@@ -139,21 +143,21 @@ export default function SocialMediaManagementPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <ThumbsUp className="w-8 h-8 text-[#2BC4C1]" />
+                <ThumbsUp className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Strategy Creation</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">We research your audience, competitors, and industry to build a custom plan for your brand.</CardContent>
             </Card>
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <MessageCircle className="w-8 h-8 text-[#F79C42]" />
+                <MessageCircle className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Content Calendar</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">We create, schedule, and publish engaging content that aligns with your goals and brand voice.</CardContent>
             </Card>
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <Users className="w-8 h-8 text-[#3B82F6]" />
+                <Users className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Community Engagement</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">We monitor, respond, and build relationships with your audience to foster loyalty and growth.</CardContent>
@@ -175,7 +179,7 @@ export default function SocialMediaManagementPage() {
           <div>
             <h2 className="text-2xl font-bold text-[#205A59] mb-4">Why Businesses Need Social Media Management</h2>
             <p className="text-gray-700 mb-4">Online solutions that make your brand stand out. Markov's SMM helps you reach new audiences, build trust, and drive measurable results—without the burden of managing it all yourself.</p>
-            <ul className="space-y-2 text-[#2BC4C1] font-medium">
+            <ul className="space-y-2 text-[#205A59] font-medium">
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5" /> Save time and resources</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5" /> Access expert strategy and execution</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5" /> Enjoy measurable, scalable growth</li>
@@ -198,7 +202,7 @@ export default function SocialMediaManagementPage() {
             {/* Financial Company */}
             <div className="bg-white p-6 rounded-xl shadow-md">
               <div className="flex justify-between items-center mb-4">
-                <div className="bg-[#3AAFA9] text-white px-3 py-1 rounded-full text-sm font-bold">
+                <div className="bg-[#205A59] text-white px-3 py-1 rounded-full text-sm font-bold">
                   Twitter Impressions: 724,000 monthly average
                 </div>
               </div>
@@ -216,7 +220,7 @@ export default function SocialMediaManagementPage() {
             {/* Instagram Engagement */}
             <div className="bg-white p-6 rounded-xl shadow-md">
               <div className="flex justify-between items-center mb-4">
-                <div className="bg-[#3AAFA9] text-white px-3 py-1 rounded-full text-sm font-bold">
+                <div className="bg-[#205A59] text-white px-3 py-1 rounded-full text-sm font-bold">
                   Instagram Engagement: +180%
                 </div>
               </div>
@@ -236,7 +240,7 @@ export default function SocialMediaManagementPage() {
             {/* Impressions */}
             <div className="bg-white p-6 rounded-xl shadow-md">
               <div className="flex justify-between items-center mb-4">
-                <div className="bg-[#3AAFA9] text-white px-3 py-1 rounded-full text-sm font-bold">
+                <div className="bg-[#205A59] text-white px-3 py-1 rounded-full text-sm font-bold">
                   Impressions: +185,556 month-over-month (Paid)
                 </div>
               </div>
@@ -254,7 +258,7 @@ export default function SocialMediaManagementPage() {
             </div>
           </div>
           <div className="flex justify-center mt-8">
-            <Button className="bg-[#F79C42] text-white font-bold px-8 py-3 rounded-full hover:bg-[#FDBC78]">Build Your Own Social Success Story</Button>
+            <Button className="bg-[#205A59] text-white font-bold px-8 py-3 rounded-full hover:bg-[#205A59]/90">Build Your Own Social Success Story</Button>
           </div>
         </div>
       </section>
@@ -267,14 +271,14 @@ export default function SocialMediaManagementPage() {
             <p className="text-gray-700 mb-4">Choose the right channels and tactics that work for your business. Markov helps you balance organic growth with paid campaigns for maximum impact.</p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-[#EAF6F6] p-4 rounded-xl">
-                <h3 className="font-semibold text-[#2BC4C1] mb-2">Organic Social</h3>
+                <h3 className="font-semibold text-[#205A59] mb-2">Organic Social</h3>
                 <ul className="text-gray-600 text-sm list-disc pl-4">
                   <li>Building community and trust</li>
                   <li>Content planning and engagement</li>
                   <li>Long-term brand growth</li>
                 </ul>
               </div>
-              <div className="bg-[#F79C42] p-4 rounded-xl">
+              <div className="bg-[#8BA640] p-4 rounded-xl">
                 <h3 className="font-semibold text-white mb-2">Paid Social</h3>
                 <ul className="text-white text-sm list-disc pl-4">
                   <li>Targeted ad campaigns</li>
@@ -355,21 +359,21 @@ export default function SocialMediaManagementPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <TrendingUp className="w-8 h-8 text-[#2BC4C1]" />
+                <TrendingUp className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Social Media Marketing</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">Strategy, campaigns, and analytics for all platforms.</CardContent>
             </Card>
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <ThumbsUp className="w-8 h-8 text-[#F79C42]" />
+                <ThumbsUp className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Social Media Advertising</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">Targeted ad campaigns to grow your brand and reach new audiences.</CardContent>
             </Card>
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <ShieldCheck className="w-8 h-8 text-[#3B82F6]" />
+                <ShieldCheck className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Social Media Brand</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">Brand strategy, visual identity, and messaging for all platforms.</CardContent>
@@ -383,21 +387,21 @@ export default function SocialMediaManagementPage() {
             </Card>
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <BarChartHorizontal className="w-8 h-8 text-[#2BC4C1]" />
+                <BarChartHorizontal className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Social Media SEO</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">Optimize your profiles and content for search visibility and engagement.</CardContent>
             </Card>
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <CalendarCheck className="w-8 h-8 text-[#F79C42]" />
+                <CalendarCheck className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Content Writing</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">Professional content creation for all your social channels.</CardContent>
             </Card>
             <Card className="bg-white shadow border-0">
               <CardHeader className="flex flex-row items-center gap-3">
-                <Lock className="w-8 h-8 text-[#3B82F6]" />
+                <Lock className="w-8 h-8 text-[#205A59]" />
                 <CardTitle>Social Media Reputation</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">Protect your reputation with proactive monitoring and crisis management.</CardContent>
@@ -414,11 +418,11 @@ export default function SocialMediaManagementPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#2BC4C1] to-[#3B82F6] text-white text-center">
+      <section className="py-16 bg-gradient-to-r from-[#205A59] to-[#8BA640] text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Let Us Help You Conquer Social</h2>
           <p className="mb-8 max-w-xl mx-auto">Markov's experts are ready to help you build a powerful, memorable brand and drive real results on social media. Get your free proposal today!</p>
-          <Button className="bg-[#F79C42] text-white font-bold text-lg px-8 py-4 hover:bg-[#FDBC78]">Get Started</Button>
+          <Button className="bg-white text-[#205A59] font-bold text-lg px-8 py-4 hover:bg-gray-100">Get Started</Button>
         </div>
       </section>
     </div>

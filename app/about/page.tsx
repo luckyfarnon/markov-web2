@@ -239,20 +239,20 @@ export default function AboutPage() {
   {[
     {
       name: "Imran Ali Chaudary ",
-      position: "CO Founder",
-      image: "/client1.png",
+      position: "CEO",
+      image: "/client1.webp",
       bio: "With over 20 years of industry experience, Alex leads our company vision and global strategy.",
     },
     {
       name: "Arshad Ali ",
-      position: "CEO",
-      image: "/client3.png",
+      position: "Director Operation",
+      image: "/client3.webp",
       bio: "Sarah drives technological innovation and oversees all technical aspects of our operations.",
     },
     {
-      name: "Danish",
-      position: "Founder",
-      image: "/client2.png",
+      name: "Danish Awan",
+      position: "Director Business Development",
+      image: "/client2.webp",
       bio: "Michael ensures operational excellence and continuous improvement across all service lines.",
     },
   ].map((member, index) => (

@@ -63,7 +63,7 @@ export default function Header() {
     {
       title: "Ecommerce Marketing",
       icon: <span className="text-blue-600 text-xl">🛒</span>,
-      items: ["Ecommerce SEO", "eCommerce PPC", "eCommerce Optimization", "Shopify SEO", "Shopify Web Design", "eCommerce Web Design"]
+      items: ["Ecommerce SEO", "eCommerce PPC", "Ecommerce Optimization", "Shopify SEO", "Shopify Web Design", "eCommerce Web Design"]
     },
     {
       title: "Social Media Marketing",
@@ -107,7 +107,7 @@ export default function Header() {
     },
     {
       title: "Ecommerce SEO",
-      href: "/services/ecommerce-marketing/ecommerce-seo",
+      href: "/services/ppc/ecommerce-seo",
       description: "Optimize your online store for search engines"
     }
   ]
@@ -238,7 +238,7 @@ export default function Header() {
                             </Link>
                           </li>
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/services/lead-generation" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/ppc/lead-generation" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-amber-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-amber-500"></span>
                               Lead Generation Services
                             </Link>
@@ -344,7 +344,7 @@ export default function Header() {
                         </div>
                         <ul className="space-y-3 text-base pl-14">
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/services/ecommerce-marketing/ecommerce-seo" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/ppc/ecommerce-seo" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-blue-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-blue-500"></span>
                               eCommerce SEO
                             </Link>
@@ -430,7 +430,7 @@ export default function Header() {
                             </Link>
                           </li>
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/video-production" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/Media-Production/video-production-page" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-amber-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-amber-500"></span>
                               Video Production Page
                             </Link>
@@ -511,19 +511,19 @@ export default function Header() {
                         </div>
                         <ul className="space-y-3 text-base pl-14">
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/services/content-marketing/seo-content-writing" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/content-writing/seo-content-writing" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-amber-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-amber-500"></span>
                               SEO Content Writing
                             </Link>
                           </li>
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/services/content-marketing/copywriting-services" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/content-writing/copywriting-services" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-amber-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-amber-500"></span>
                               Copywriting Services
                             </Link>
                           </li>
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/services/content-marketing/email-marketing-services" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/content-writing/email-marketing-services" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-amber-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-amber-500"></span>
                               Email Marketing Services
                             </Link>
@@ -542,19 +542,19 @@ export default function Header() {
                         </div>
                         <ul className="space-y-3 text-base pl-14">
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/services/cro-services/cro-audits" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/cro-services/CRO-Audits" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-green-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-green-500"></span>
                               CRO Audits
                             </Link>
                           </li>
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/services/cro-services/user-experience-testing" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/cro-services/User-Experience-Testing" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-green-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-green-500"></span>
                               User Experience Testing
                             </Link>
                           </li>
                           <li className="transition-all duration-200 hover:translate-x-1">
-                            <Link href="/services/cro-services/user-behavior-analytics" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
+                            <Link href="/services/cro-services/User-Behavior-Analytics" className="text-gray-700 hover:text-[#205A59] hover:font-medium flex items-center">
                               <span className="w-1.5 h-1.5 bg-green-300 rounded-full mr-2 transition-all duration-300 group-hover/category:bg-green-500"></span>
                               User Behavior Analytics
                             </Link>

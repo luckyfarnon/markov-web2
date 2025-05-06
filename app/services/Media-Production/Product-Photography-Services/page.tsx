@@ -7,10 +7,10 @@ import { motion } from "framer-motion"
 
 export default function ProductPhotographyServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#C14600] to-[#ffb347]">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative py-32 overflow-hidden bg-[#1A365D]">
+        <div className="absolute inset-0 bg-black/10" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} 
@@ -36,7 +36,7 @@ export default function ProductPhotographyServicesPage() {
             <Button 
               asChild 
               size="lg" 
-              className="bg-white text-[#C14600] font-bold rounded-full px-10 py-6 text-lg shadow-xl hover:bg-[#C14600] hover:text-white transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-[#1A365D] font-bold rounded-full px-10 py-6 text-lg shadow-xl hover:bg-[#1A365D]/90 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               <Link href="#contact">Get Started</Link>
             </Button>
@@ -45,7 +45,7 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Service Details */}
-      <section className="py-24 bg-white/10 backdrop-blur-sm">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -53,9 +53,9 @@ export default function ProductPhotographyServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-extrabold mb-6 text-white">Why Professional Product Photography?</h2>
-            <p className="text-white/90 mb-8 text-lg leading-relaxed">High-quality product photos are essential for e-commerce, catalogs, and marketing. Our expert photographers ensure your products look their best, helping you stand out and increase conversions.</p>
-            <ul className="space-y-4 text-white/90">
+            <h2 className="text-4xl font-extrabold mb-6 text-[#1A365D]">Why Professional Product Photography?</h2>
+            <p className="text-gray-700 mb-8 text-lg leading-relaxed">High-quality product photos are essential for e-commerce, catalogs, and marketing. Our expert photographers ensure your products look their best, helping you stand out and increase conversions.</p>
+            <ul className="space-y-4 text-gray-700">
               {[
                 "Boosts sales and conversions",
                 "Builds brand trust and credibility",
@@ -64,7 +64,7 @@ export default function ProductPhotographyServicesPage() {
                 "Fast turnaround and flexible packages"
               ].map((item, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <span className="text-[#C14600] text-xl">✓</span>
+                  <span className="text-[#1A365D] text-xl">✓</span>
                   {item}
                 </li>
               ))}
@@ -77,7 +77,7 @@ export default function ProductPhotographyServicesPage() {
             viewport={{ once: true }}
             className="flex justify-center"
           >
-            <div className="relative w-full max-w-lg aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative w-full max-w-lg aspect-video rounded-2xl overflow-hidden shadow-lg">
               <Image 
                 src="/photography.jpg" 
                 alt="Product Photography" 
@@ -90,14 +90,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Our Process */}
-      <section className="py-24 bg-white/5 backdrop-blur-sm">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold text-center mb-16 text-white"
+            className="text-4xl font-extrabold text-center mb-16 text-[#1A365D]"
           >
             Our Process
           </motion.h2>
@@ -114,9 +114,9 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center flex flex-col items-center hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 text-center flex flex-col items-center transition-all duration-300 shadow-md hover:shadow-lg"
               >
-                <div className="w-16 h-16 bg-[#C14600] rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-[#1A365D] rounded-full flex items-center justify-center mb-6">
                   {idx === 0 && (
                     // Lightbulb SVG for Consultation
                     <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="white"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 2a7 7 0 0 0-4 12.9V18a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-3.1A7 7 0 0 0 12 2zm0 0v2m0 16v2m-4-4h8"/></svg>
@@ -134,8 +134,8 @@ export default function ProductPhotographyServicesPage() {
                     <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="white"><rect x="1" y="7" width="15" height="13" rx="2" strokeWidth="2"/><path strokeWidth="2" d="M16 17h2a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-2"/><circle cx="5.5" cy="19.5" r="1.5" strokeWidth="2"/><circle cx="18.5" cy="19.5" r="1.5" strokeWidth="2"/></svg>
                   )}
                 </div>
-                <h3 className="font-bold text-xl mb-4 text-white">{step.title}</h3>
-                <p className="text-white/80">{step.desc}</p>
+                <h3 className="font-bold text-xl mb-4 text-[#1A365D]">{step.title}</h3>
+                <p className="text-gray-600">{step.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -143,14 +143,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Sample Gallery */}
-      <section className="py-24 bg-white/10 backdrop-blur-sm">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold text-center mb-16 text-white"
+            className="text-4xl font-extrabold text-center mb-16 text-[#1A365D]"
           >
             Sample Gallery
           </motion.h2>
@@ -162,7 +162,7 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl hover:shadow-[#C14600]/30 transition-all duration-300 transform hover:scale-105"
+                className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Image src={img} alt="Product Sample" fill className="object-cover" />
               </motion.div>
@@ -172,14 +172,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Impact & Statistics Section */}
-      <section className="py-24 bg-white/5 backdrop-blur-sm">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold mb-16 text-white"
+            className="text-4xl font-extrabold mb-16 text-[#1A365D]"
           >
             The Power of Great Product Photography
           </motion.h2>
@@ -196,10 +196,10 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <div className="text-5xl font-bold text-[#C14600] mb-4">{stat.number}</div>
-                <div className="text-white/90">{stat.text}</div>
+                <div className="text-5xl font-bold text-[#1A365D] mb-4">{stat.number}</div>
+                <div className="text-gray-600">{stat.text}</div>
               </motion.div>
             ))}
           </div>
@@ -207,14 +207,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Types of Product Photography */}
-      <section className="py-24 bg-white/10 backdrop-blur-sm">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold text-center mb-16 text-white"
+            className="text-4xl font-extrabold text-center mb-16 text-[#1A365D]"
           >
             Types of Product Photography
           </motion.h2>
@@ -233,11 +233,11 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center text-center hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
               >
                 <span className="text-6xl mb-6">{type.icon}</span>
-                <div className="font-bold text-xl mb-4 text-white">{type.title}</div>
-                <div className="text-white/80">{type.desc}</div>
+                <div className="font-bold text-xl mb-4 text-[#1A365D]">{type.title}</div>
+                <div className="text-gray-600">{type.desc}</div>
               </motion.div>
             ))}
           </div>
@@ -245,14 +245,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Creative Use Cases */}
-      <section className="py-24 bg-white/5 backdrop-blur-sm">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold text-center mb-16 text-white"
+            className="text-4xl font-extrabold text-center mb-16 text-[#1A365D]"
           >
             Creative Ways to Use Product Photos
           </motion.h2>
@@ -269,10 +269,10 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <h3 className="font-semibold text-xl mb-4 text-white">{useCase.title}</h3>
-                <p className="text-white/80">{useCase.desc}</p>
+                <h3 className="font-semibold text-xl mb-4 text-[#1A365D]">{useCase.title}</h3>
+                <p className="text-gray-600">{useCase.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -280,14 +280,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Meet the Photographers */}
-      <section className="py-24 bg-white/10 backdrop-blur-sm">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold text-center mb-16 text-white"
+            className="text-4xl font-extrabold text-center mb-16 text-[#1A365D]"
           >
             Meet Our Photographers
           </motion.h2>
@@ -304,18 +304,18 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
+                className="flex flex-col items-center bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div className="relative w-32 h-32 mb-6">
                   <Image 
                     src={member.image} 
                     alt={member.name} 
                     fill
-                    className="rounded-full object-cover border-4 border-[#C14600]"
+                    className="rounded-full object-cover border-4 border-[#1A365D]"
                   />
                 </div>
-                <div className="font-bold text-xl text-white mb-2">{member.name}</div>
-                <div className="text-white/80">{member.role}</div>
+                <div className="font-bold text-xl text-[#1A365D] mb-2">{member.name}</div>
+                <div className="text-gray-600">{member.role}</div>
               </motion.div>
             ))}
           </div>
@@ -323,14 +323,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Client Testimonials */}
-      <section className="py-24 bg-white/5 backdrop-blur-sm">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold text-center mb-16 text-white"
+            className="text-4xl font-extrabold text-center mb-16 text-[#1A365D]"
           >
             Client Testimonials
           </motion.h2>
@@ -349,14 +349,14 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center text-center border-t-4 border-[#C14600] hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 flex flex-col items-center text-center border-t-4 border-[#1A365D] shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <svg className="w-8 h-8 text-[#C14600] mb-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-[#1A365D] mb-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 13h6m2 0a2 2 0 01-2 2v2a2 2 0 01-2 2H9a2 2 0 01-2-2v-2a2 2 0 012-2h6zm-6-6h.01M15 7h.01" />
                 </svg>
-                <p className="text-white/90 mb-6 italic">"{testimonial.text}"</p>
-                <div className="font-semibold text-white">{testimonial.name}</div>
-                <div className="text-sm text-white/70">{testimonial.company}</div>
+                <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
+                <div className="font-semibold text-[#1A365D]">{testimonial.name}</div>
+                <div className="text-sm text-gray-500">{testimonial.company}</div>
               </motion.div>
             ))}
           </div>
@@ -364,14 +364,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Resources & Blog Section */}
-      <section className="py-24 bg-white/10 backdrop-blur-sm">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold text-center mb-16 text-white"
+            className="text-4xl font-extrabold text-center mb-16 text-[#1A365D]"
           >
             Resources & Insights
           </motion.h2>
@@ -387,15 +387,15 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 flex flex-col justify-between h-full hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 flex flex-col justify-between h-full shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
               >
                 <div>
-                  <h3 className="font-bold text-xl text-white mb-4">{res.title}</h3>
-                  <p className="text-white/80 mb-6">{res.desc}</p>
+                  <h3 className="font-bold text-xl text-[#1A365D] mb-4">{res.title}</h3>
+                  <p className="text-gray-600 mb-6">{res.desc}</p>
                 </div>
                 <Link 
                   href={res.link} 
-                  className="text-[#C14600] font-semibold hover:text-white transition-colors duration-300"
+                  className="text-[#1A365D] font-semibold hover:text-blue-700 transition-colors duration-300"
                 >
                   Read More →
                 </Link>
@@ -406,14 +406,14 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-white/5 backdrop-blur-sm">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl font-extrabold text-center mb-16 text-white"
+            className="text-4xl font-extrabold text-center mb-16 text-[#1A365D]"
           >
             Frequently Asked Questions
           </motion.h2>
@@ -430,10 +430,10 @@ export default function ProductPhotographyServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <div className="font-semibold text-xl text-white mb-4">{faq.question}</div>
-                <div className="text-white/80">{faq.answer}</div>
+                <div className="font-semibold text-xl text-[#1A365D] mb-4">{faq.question}</div>
+                <div className="text-gray-600">{faq.answer}</div>
               </motion.div>
             ))}
           </div>
@@ -441,8 +441,8 @@ export default function ProductPhotographyServicesPage() {
       </section>
 
       {/* Call to Action */}
-      <section id="contact" className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
+      <section id="contact" className="relative py-32 overflow-hidden bg-[#1A365D]">
+        <div className="absolute inset-0 bg-black/10" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -471,7 +471,7 @@ export default function ProductPhotographyServicesPage() {
             <Button 
               asChild 
               size="lg" 
-              className="bg-white text-[#C14600] font-bold rounded-full px-10 py-6 text-lg shadow-xl hover:bg-[#C14600] hover:text-white transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-[#1A365D] font-bold rounded-full px-10 py-6 text-lg shadow-xl hover:bg-[#1A365D]/90 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               <Link href="/contact">Contact Us</Link>
             </Button>

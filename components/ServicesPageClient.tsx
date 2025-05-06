@@ -170,13 +170,13 @@ export default function ServicesPageClient() {
                 <ul className="space-y-3">
                   <li className="flex items-start group/item">
                     <span className="text-blue-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/link-building/digital-pr-outreach" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                    <Link href="/services/link-building/Digital-PR-Outreach" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
                       Digital PR Outreach
                     </Link>
                   </li>
                   <li className="flex items-start group/item">
                     <span className="text-blue-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/link-building/haro-link-building" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                    <Link href="/services/link-building/HARO-link-building" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
                       HARO Link Building
                     </Link>
                   </li>
@@ -296,7 +296,7 @@ export default function ServicesPageClient() {
                 <ul className="space-y-3">
                   <li className="flex items-start group/item">
                     <span className="text-blue-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/ecommerce-marketing/ecommerce-seo" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                    <Link href="/services/ppc/ecommerce-seo" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
                       eCommerce SEO
                     </Link>
                   </li>
@@ -516,19 +516,19 @@ export default function ServicesPageClient() {
                 <ul className="space-y-3">
                   <li className="flex items-start group/item">
                     <span className="text-amber-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/content-marketing/seo-content-writing" className="text-gray-700 hover:text-amber-600 transition-colors duration-300">
+                    <Link href="/services/content-writing/seo-content-writing" className="text-gray-700 hover:text-amber-600 transition-colors duration-300">
                       SEO Content Writing
                     </Link>
                   </li>
                   <li className="flex items-start group/item">
                     <span className="text-amber-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/content-marketing/copywriting-services" className="text-gray-700 hover:text-amber-600 transition-colors duration-300">
+                    <Link href="/services/content-writing/copywriting-services" className="text-gray-700 hover:text-amber-600 transition-colors duration-300">
                       Copywriting Services
                     </Link>
                   </li>
                   <li className="flex items-start group/item">
                     <span className="text-amber-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/content-marketing/email-marketing-services" className="text-gray-700 hover:text-amber-600 transition-colors duration-300">
+                    <Link href="/services/content-writing/email-marketing-services" className="text-gray-700 hover:text-amber-600 transition-colors duration-300">
                       Email Marketing Services
                     </Link>
                   </li>
@@ -560,19 +560,19 @@ export default function ServicesPageClient() {
                 <ul className="space-y-3">
                   <li className="flex items-start group/item">
                     <span className="text-green-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/cro-services/cro-audits" className="text-gray-700 hover:text-green-600 transition-colors duration-300">
+                    <Link href="/services/cro-services/CRO-Audits" className="text-gray-700 hover:text-green-600 transition-colors duration-300">
                       CRO Audits
                     </Link>
                   </li>
                   <li className="flex items-start group/item">
                     <span className="text-green-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/cro-services/user-experience-testing" className="text-gray-700 hover:text-green-600 transition-colors duration-300">
+                    <Link href="/services/cro-services/User-Experience-Testing" className="text-gray-700 hover:text-green-600 transition-colors duration-300">
                       User Experience Testing
                     </Link>
                   </li>
                   <li className="flex items-start group/item">
                     <span className="text-green-600 mr-2 mt-1 transition-all duration-300 group-hover/item:translate-x-1 transform">•</span>
-                    <Link href="/services/cro-services/user-behavior-analytics" className="text-gray-700 hover:text-green-600 transition-colors duration-300">
+                    <Link href="/services/cro-services/User-Behavior-Analytics" className="text-gray-700 hover:text-green-600 transition-colors duration-300">
                       User Behavior Analytics
                     </Link>
                   </li>

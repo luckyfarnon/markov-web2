@@ -18,7 +18,7 @@ export default function SocialMediaBrandManagementPage() {
           <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">Establish a unique voice, build trust, and grow your audience with Markov's data-driven social media brand management solutions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-[#2BC4C1] hover:bg-gray-100 font-bold">Get Your Free Proposal</Button>
-            <Button variant="outline" className="text-white border-white hover:bg-white/20 font-bold">Contact Us</Button>
+            <Button variant="outline" className="text-white border-white bg-transparent hover:bg-white/20 font-bold">Contact Us</Button>
           </div>
         </div>
       </section>

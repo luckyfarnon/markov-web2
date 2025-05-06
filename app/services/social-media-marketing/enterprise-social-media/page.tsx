@@ -25,7 +25,9 @@ export default function EnterpriseSocialMediaPage() {
                   placeholder="Enter Website Address" 
                   className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#57B4BA]" 
                 />
-                <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold">GET MY FREE PROPOSAL</Button>
+                <Link href="/contact?type=digital-marketing&service=social-media&source=enterprise">
+                  <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold">GET MY FREE PROPOSAL</Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -78,7 +80,9 @@ export default function EnterpriseSocialMediaPage() {
             </div>
             
             <div className="flex justify-center mb-10">
-              <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-3 rounded-md text-lg">BOOST MY ONLINE PRESENCE</Button>
+              <Link href="/contact?type=digital-marketing&service=social-media&source=enterprise">
+                <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-3 rounded-md text-lg">BOOST MY ONLINE PRESENCE</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -110,9 +114,11 @@ export default function EnterpriseSocialMediaPage() {
                 We help you maintain consistent messaging across all social platforms while tailoring content to each platform's unique audience and format requirements.
               </p>
               <div className="pt-4">
-                <Button className="bg-[#57B4BA] hover:bg-[#468e93] text-white font-bold px-6 py-3 rounded-md">
-                  CHAT WITH AN SMM EXPERT
-                </Button>
+                <Link href="/contact?type=digital-marketing&service=social-media&source=enterprise-expert">
+                  <Button className="bg-[#57B4BA] hover:bg-[#468e93] text-white font-bold px-6 py-3 rounded-md">
+                    CHAT WITH AN SMM EXPERT
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -239,9 +245,11 @@ export default function EnterpriseSocialMediaPage() {
             </p>
             
             <div className="flex justify-center">
-              <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-3 rounded-md">
-                ASSESS MY PERFORMANCE
-              </Button>
+              <Link href="/contact?type=digital-marketing&service=social-media&source=enterprise-assessment">
+                <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-3 rounded-md">
+                  ASSESS MY PERFORMANCE
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -349,9 +357,11 @@ export default function EnterpriseSocialMediaPage() {
           </div>
           
           <div className="flex justify-center">
-            <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-3 rounded-md">
-              CHAT WITH AN SMM EXPERT
-            </Button>
+            <Link href="/contact?type=digital-marketing&service=social-media&source=enterprise-expert">
+              <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-3 rounded-md">
+                CHAT WITH AN SMM EXPERT
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -445,9 +455,11 @@ export default function EnterpriseSocialMediaPage() {
           </p>
           
           <div className="flex justify-center">
-            <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-3 rounded-md">
-              READY TO OUTPERFORM THE COMPETITION?
-            </Button>
+            <Link href="/contact?type=digital-marketing&service=social-media&source=enterprise-competition">
+              <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-3 rounded-md">
+                READY TO OUTPERFORM THE COMPETITION?
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -459,9 +471,11 @@ export default function EnterpriseSocialMediaPage() {
           <p className="mb-8 max-w-2xl mx-auto">
             Make the Most of What Digital Marketing Has To Offer
           </p>
-          <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-4 text-lg">
-            ACCELERATE MY ONLINE GROWTH NOW
-          </Button>
+          <Link href="/contact?type=digital-marketing&service=social-media&source=enterprise-growth">
+            <Button className="bg-[#FE4F2D] hover:bg-[#e64325] text-white font-bold px-8 py-4 text-lg">
+              ACCELERATE MY ONLINE GROWTH NOW
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
