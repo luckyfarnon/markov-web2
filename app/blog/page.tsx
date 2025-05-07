@@ -104,10 +104,17 @@ const ALL_CATEGORIES = Array.from(new Set(BLOG_POSTS.map(post => post.category))
 // All unique tags from blog posts
 const ALL_TAGS = Array.from(new Set(BLOG_POSTS.flatMap(post => post.tags)));
 
-export default function BlogPage() {
+export default function BlogPage({ searchParams }: { searchParams: { post?: string } }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  
+  // Check if we should show an individual post
+  const postId = searchParams.post;
+  
+  if (postId) {
+    return <BlogPost slug={postId} />;
+  }
   
   // Filter blog posts based on search, category and tag
   const filteredPosts = BLOG_POSTS.filter(post => {
@@ -226,7 +233,7 @@ export default function BlogPage() {
                                 <p className="text-xs text-gray-500">{post.authorRole}</p>
                               </div>
                             </div>
-                            <Link href={`/blog/${post.id}`} className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            <Link href={`/blog?post=${post.id}`} className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
                               Read more <ChevronRight className="ml-1 w-4 h-4" />
                             </Link>
                           </div>
@@ -351,7 +358,7 @@ export default function BlogPage() {
                               </div>
                               <p className="text-xs text-gray-700">{post.author}</p>
                             </div>
-                            <Link href={`/blog/${post.id}`} className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center">
+                            <Link href={`/blog?post=${post.id}`} className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center">
                               Read article <ChevronRight className="ml-1 w-4 h-4" />
                             </Link>
                           </div>
@@ -432,16 +439,97 @@ export function BlogAlternateLinks() {
       <p className="mb-4">You can access blog posts through:</p>
       <ul className="list-disc pl-6 mb-4">
         <li className="mb-2">
-          <a href="/blog-posts" className="text-blue-600 hover:underline">
+          <a href="/blog-posts?slug=future-of-bpo-2024" className="text-blue-600 hover:underline">
             Query parameter approach: /blog-posts?slug=post-name
           </a>
         </li>
+        <li className="mb-2">
+          <a href="/blog-catch?slug=future-of-bpo-2024" className="text-blue-600 hover:underline">
+            Alternative approach: /blog-catch?slug=post-name
+          </a>
+        </li>
         <li>
-          <a href="/blog/future-of-bpo-2024" className="text-blue-600 hover:underline">
-            Dynamic route approach: /blog/post-name
+          <a href="/blog?post=1" className="text-blue-600 hover:underline">
+            Main blog approach: /blog?post=post-id
           </a>
         </li>
       </ul>
     </div>
   );
+}
+
+// Add the BlogPost component at the end
+function BlogPost({ slug }: { slug: string }) {
+  // Simplified version for demo purposes 
+  // Find the matching blog post by ID or slug
+  const post = BLOG_POSTS.find(p => p.id === slug);
+
+  if (!post) {
+    return (
+      <div className="container mx-auto p-4 mt-8 text-center">
+        <h2 className="text-2xl font-bold mb-4">Blog Post Not Found</h2>
+        <p className="mb-4">The blog post you are looking for could not be found.</p>
+        <Button asChild>
+          <Link href="/blog">Back to Blog</Link>
+        </Button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="container mx-auto p-4 mt-8">
+      <Link href="/blog" className="inline-flex items-center mb-4 text-blue-600 hover:text-blue-800">
+        <ChevronRight className="w-4 h-4 mr-1 rotate-180" />
+        Back to all posts
+      </Link>
+      
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="relative h-64 md:h-96">
+          <Image
+            src={post.imageUrl}
+            alt={post.title}
+            fill
+            className="object-cover"
+          />
+        </div>
+        
+        <div className="p-6">
+          <Badge className="mb-4">{post.category}</Badge>
+          <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
+          
+          <div className="flex items-center mb-6">
+            <div className="relative w-12 h-12 mr-4 overflow-hidden rounded-full">
+              <Image 
+                src={post.authorImage}
+                alt={post.author}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <p className="font-medium">{post.author}</p>
+              <p className="text-sm text-gray-500">{post.authorRole}</p>
+            </div>
+            <div className="ml-6 flex items-center text-gray-500">
+              <Calendar className="w-4 h-4 mr-2" />
+              <span>{post.date}</span>
+              <span className="mx-2">•</span>
+              <Clock className="w-4 h-4 mr-2" />
+              <span>{post.readTime}</span>
+            </div>
+          </div>
+          
+          <div className="prose max-w-none">
+            <p className="text-lg">{post.excerpt}</p>
+            <p>This is a placeholder for the full blog post content. In a real application, this would be the actual content of the blog post, potentially with rich formatting, images, and other elements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Add a function at the end of the file to detect if we're viewing a blog post
+export function shouldShowBlogPost(url: URL): boolean {
+  return !!url.searchParams.get('post');
 } 
