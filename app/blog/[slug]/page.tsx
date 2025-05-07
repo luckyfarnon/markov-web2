@@ -1,13 +1,28 @@
-"use client";
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Metadata } from 'next';
 
-// Define the page component with correct typing for params
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+// Define proper types for Next.js 15 dynamic routes
+type BlogPostPageProps = {
+  params: {
+    slug: string;
+  };
+  searchParams: Record<string, string | string[] | undefined>;
+};
+
+// Generate metadata for the page
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  return {
+    title: `Blog Post: ${params.slug}`,
+    description: 'Blog post details'
+  };
+}
+
+// Server component without "use client" directive
+export default function BlogPostPage({ params }: BlogPostPageProps) {
   // This would be replaced with actual data fetching in a real app
   const post = getBlogPostBySlug(params.slug);
 
