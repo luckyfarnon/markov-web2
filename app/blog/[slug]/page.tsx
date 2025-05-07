@@ -3,17 +3,13 @@ import { getBlogPostBySlug } from '@/lib/blog'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
-// Server component with correct params typing for Next.js 15
+// Updated server component with correct params typing for Next.js 15
 export default async function BlogPostPage({
   params
 }: {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }) {
-  // Await the params to get the slug
-  const { slug } = await params;
-  
-  // This would normally fetch data from a database or API
-  const post = getBlogPostBySlug(slug)
+  const post = getBlogPostBySlug(params.slug)
   
   if (!post) {
     return (
