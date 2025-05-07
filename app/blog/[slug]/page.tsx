@@ -1,22 +1,26 @@
-"use client";
-
-import React from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
-// This is a client component for dynamic routes in Next.js
-export default function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+// Define the params type for this dynamic route
+type Params = {
+  slug: string;
+};
+
+// Define the props type for the page component
+type Props = {
+  params: Params;
+  searchParams: Record<string, string | string[] | undefined>;
+};
+
+export default function Page(props: Props) {
+  const { slug } = props.params;
+
   return (
-    <div className="container mx-auto px-4 py-20">
-      <h1 className="text-3xl font-bold mb-6">Blog Post: {params.slug}</h1>
-      <p className="mb-8">This is the content for {params.slug}</p>
-      <Button asChild>
-        <Link href="/blog">Back to blog</Link>
-      </Button>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Blog Post: {slug}</h1>
+      <p className="mb-4">This is the content for {slug}</p>
+      <Link href="/blog" className="text-blue-500 hover:underline">
+        Back to blog
+      </Link>
     </div>
   );
 } 

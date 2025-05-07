@@ -414,6 +414,34 @@ export default function BlogPage() {
           </div>
         </section>
       </main>
+      {/* Add the BlogAlternateLinks component to the page */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <BlogAlternateLinks />
+        </div>
+      </section>
     </div>
   )
+}
+
+// Add links to the dynamic route blog posts or the alternative approach with search parameters
+export function BlogAlternateLinks() {
+  return (
+    <div className="mt-8 p-4 bg-gray-100 rounded-lg">
+      <h2 className="text-xl font-bold mb-4">Alternative Blog Access</h2>
+      <p className="mb-4">You can access blog posts through:</p>
+      <ul className="list-disc pl-6 mb-4">
+        <li className="mb-2">
+          <a href="/blog-posts" className="text-blue-600 hover:underline">
+            Query parameter approach: /blog-posts?slug=post-name
+          </a>
+        </li>
+        <li>
+          <a href="/blog/future-of-bpo-2024" className="text-blue-600 hover:underline">
+            Dynamic route approach: /blog/post-name
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
 } 
